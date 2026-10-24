@@ -9,7 +9,14 @@
 <body>
   <div class="app">
     <header class="top">
-      <h1 class="logo">Airvythe</h1>
+      <div class="brand">
+       <img src="logo.png"
+            alt="Airvythe — Beyond the Forecast"
+            class="brand-logo">
+       <h1 class="logo">Airvythe</h1>
+       <p class="tagline">Beyond the Forecast</p>
+            
+      </div>
       <button id="unit-toggle" class="chip" type="button" aria-label="Switch units">°C</button>
     </header>
 
@@ -19,7 +26,7 @@
         <label for="city-input" class="sr-only">City name</label>
         <input type="text" id="city-input" placeholder="Search for a city..." autocomplete="off" required>
         <button type="submit" class="btn">Search Weather</button>
-        <button type="button" id="locate-btn" class="btn btn-ghost" title="Use my location">📍</button>
+        <button type="button" id="locate-btn" class="btn btn-ghost" title="Use my location">Use Current Location</button>
       </form>
       <div id="recent" class="recent"></div>
     </section>

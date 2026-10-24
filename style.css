@@ -12,6 +12,27 @@ body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .top { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 1.4rem; }
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+}
+
+.tagline {
+  font-size: 0.7rem;
+  color: var(--muted);
+  opacity: 0.7;
+  letter-spacing: 1.2px;
+  margin-top: 3px;
+  align-self: flex-start;
+}
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
+}
 .chip { background: var(--card); color: var(--text); border: 1px solid var(--card-2); padding: 8px 14px; border-radius: 10px; cursor: pointer; font-size: 1rem; }
 .hero { text-align: center; margin: 40px 0 24px; }
 .hero h2 { font-size: clamp(1.8rem, 5vw, 3rem); margin-bottom: 24px; }
