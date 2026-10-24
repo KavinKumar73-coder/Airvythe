@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airvythe | Weather Forecast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <h1 class="logo">Airvythe</h1>
+      <button id="unit-toggle" class="chip" type="button" aria-label="Switch units">°C</button>
+    </header>
+
+    <section class="hero">
+      <h2>How's the sky looking today?</h2>
+      <form id="search-form" class="search">
+        <label for="city-input" class="sr-only">City name</label>
+        <input type="text" id="city-input" placeholder="Search for a city..." autocomplete="off" required>
+        <button type="submit" class="btn">Search Weather</button>
+        <button type="button" id="locate-btn" class="btn btn-ghost" title="Use my location">📍</button>
+      </form>
+      <div id="recent" class="recent"></div>
+    </section>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+
+    <main id="weather-result" class="results" hidden>
+      <section class="card current">
+        <div>
+          <h3 id="place"></h3>
+          <p id="date" class="muted"></p>
+          <p id="condition" class="condition"></p>
+        </div>
+        <div class="temp-block">
+          <span id="icon" class="icon" aria-hidden="true"></span>
+          <span id="temp" class="temp"></span>
+        </div>
+      </section>
+
+      <section class="stats">
+        <div class="card stat"><span class="muted">Feels like</span><strong id="feels"></strong></div>
+        <div class="card stat"><span class="muted">Humidity</span><strong id="humidity"></strong></div>
+        <div class="card stat"><span class="muted">Wind</span><strong id="wind"></strong></div>
+        <div class="card stat">
+    <span class="muted">Chance of Rain</span>
+    <strong id="rain-chance">--%</strong>
+</div>
+        
+
+
+      </section>
+
+      <section>
+        <h3 class="section-title">7-day forecast</h3>
+        <div id="forecast" class="forecast"></div>
+      </section>
+    </main>
+
+    <footer class="footer">Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo.com</a></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
